@@ -1,0 +1,802 @@
+[
+    {
+        "id": "dca51f4a8d1e3e83",
+        "type": "tab",
+        "label": "CROP_RECOMMENDATION",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "3b6413d03237c422",
+        "type": "tab",
+        "label": "Flow 2",
+        "disabled": true,
+        "info": ""
+    },
+    {
+        "id": "fc1a98afc52ef543",
+        "type": "tab",
+        "label": "YIELD_PREDICTION",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "1c732b95c372b85a",
+        "type": "ui_tab",
+        "name": "Yield Prediction",
+        "icon": "Dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "52856be2f7a8dce4",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-dark",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#00cc22",
+                "baseFont": "Impact,Impact,Charcoal,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#e10d09",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#097479",
+                    "value": "#e10d09",
+                    "edited": true
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#e10d09",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#f7433f",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#555555",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#eeeeee",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#e10d09",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "7ab3785e8c401e99",
+        "type": "ui_group",
+        "name": "Please Enter The Following Data",
+        "tab": "45787c04fb3c1575",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "45787c04fb3c1575",
+        "type": "ui_tab",
+        "name": "Crop Recommendation",
+        "icon": "<i class=\"fa fa-user-circle-o\" aria-hidden=\"true\"></i>",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "f3a8eac46bc7ec7c",
+        "type": "ui_group",
+        "name": "Please Enter The Following Data",
+        "tab": "1c732b95c372b85a",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "02cd9eb49b585314",
+        "type": "ibmiot",
+        "name": "Crop_reco_IoT",
+        "keepalive": "10080",
+        "serverName": "",
+        "cleansession": true,
+        "appId": "",
+        "shared": false
+    },
+    {
+        "id": "65a5956dbed4e2bc",
+        "type": "ui_form",
+        "z": "dca51f4a8d1e3e83",
+        "name": "",
+        "label": "",
+        "group": "7ab3785e8c401e99",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "options": [
+            {
+                "label": "N",
+                "value": "a",
+                "type": "number",
+                "required": false,
+                "rows": null
+            },
+            {
+                "label": "P",
+                "value": "b",
+                "type": "number",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "K",
+                "value": "c",
+                "type": "number",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "Temperature",
+                "value": "d",
+                "type": "number",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "Humidity",
+                "value": "e",
+                "type": "number",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "pH",
+                "value": "f",
+                "type": "number",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "Rainfall",
+                "value": "g",
+                "type": "number",
+                "required": true,
+                "rows": null
+            }
+        ],
+        "formValue": {
+            "a": "",
+            "b": "",
+            "c": "",
+            "d": "",
+            "e": "",
+            "f": "",
+            "g": ""
+        },
+        "payload": "",
+        "submit": "submit",
+        "cancel": "cancel",
+        "topic": "topic",
+        "topicType": "msg",
+        "splitLayout": "",
+        "x": 200,
+        "y": 120,
+        "wires": [
+            [
+                "e1c84f9ecc92ae2e"
+            ]
+        ]
+    },
+    {
+        "id": "ddfd3157daa8a249",
+        "type": "ui_form",
+        "z": "3b6413d03237c422",
+        "name": "",
+        "label": "",
+        "group": "7ab3785e8c401e99",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "options": [
+            {
+                "label": "Crop",
+                "value": "i",
+                "type": "text",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "State",
+                "value": "n",
+                "type": "text",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "Cost of Cultivation (`/Hectare) A2+FL",
+                "value": "d",
+                "type": "number",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "Cost of Cultivation (`/Hectare) C2",
+                "value": "u",
+                "type": "number",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "Cost of Production (`/Quintal) C2",
+                "value": "m",
+                "type": "number",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "Support price",
+                "value": "i",
+                "type": "number",
+                "required": true,
+                "rows": null
+            }
+        ],
+        "formValue": {
+            "i": "",
+            "n": "",
+            "d": "",
+            "u": "",
+            "m": ""
+        },
+        "payload": "",
+        "submit": "submit",
+        "cancel": "cancel",
+        "topic": "topic",
+        "topicType": "msg",
+        "splitLayout": "",
+        "x": 180,
+        "y": 120,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "47086f08edfaf9b7",
+        "type": "debug",
+        "z": "dca51f4a8d1e3e83",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 590,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "e1c84f9ecc92ae2e",
+        "type": "function",
+        "z": "dca51f4a8d1e3e83",
+        "name": "global variable for crop recommendation",
+        "func": "global.set(\"N\",msg.payload.a)\nglobal.set(\"P\",msg.payload.b)\nglobal.set(\"K\",msg.payload.c)\nglobal.set(\"Temperature\",msg.payload.d)\nglobal.set(\"Humidity\",msg.payload.e)\nglobal.set(\"pH\",msg.payload.f)\nglobal.set(\"Rainfall\",msg.payload.g)\nvar apikey = \"eNiN28TOr9CnOXR9YKdsU0DMzMBp7SBoKIDOxMykVxDW\"\nmsg.headers={\"content-type\":\"application/x-www-form-urlencoded\"}\nmsg.payload={\"grant_type\":\"urn:ibm:params:oauth:grant-type:apikey\",\"apikey\":apikey}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 490,
+        "y": 180,
+        "wires": [
+            [
+                "47086f08edfaf9b7",
+                "19da6757fe05563f"
+            ]
+        ]
+    },
+    {
+        "id": "19da6757fe05563f",
+        "type": "http request",
+        "z": "dca51f4a8d1e3e83",
+        "name": "",
+        "method": "POST",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "https://iam.cloud.ibm.com/identity/token",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "x": 850,
+        "y": 180,
+        "wires": [
+            [
+                "ba65efb905fffcc7",
+                "8b5f6a5e63a2b6aa"
+            ]
+        ]
+    },
+    {
+        "id": "ba65efb905fffcc7",
+        "type": "debug",
+        "z": "dca51f4a8d1e3e83",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 970,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "8b5f6a5e63a2b6aa",
+        "type": "function",
+        "z": "dca51f4a8d1e3e83",
+        "name": "Inputconverter",
+        "func": "var a= global.get(\"N\")\nvar b = global.get(\"P\")\nvar c = global.get(\"K\")\nvar d = global.get(\"Temperature\")\nvar e= global.get(\"Humidity\")\nvar f= global.get(\"pH\")\nvar g= global.get(\"Rainfall\")\nvar token=msg.payload.access_token\nmsg.headers={'Content-Type': 'application/json',\"Authorization\":\"Bearer \"+token,\"Accept\":\"application/json\"}\nmsg.payload={\"input_data\":[{\"fields\": [[\"N\", \"P\", \"K\",\"Temperature\", \"Humidity\",  \"pH\",  \"Rainfall\"]],\"values\": [[a,b,c,d,e,f,g]]}]}\nreturn msg;\n ",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1110,
+        "y": 180,
+        "wires": [
+            [
+                "dacabd1057057bd7"
+            ]
+        ]
+    },
+    {
+        "id": "dacabd1057057bd7",
+        "type": "http request",
+        "z": "dca51f4a8d1e3e83",
+        "name": "",
+        "method": "POST",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "https://eu-gb.ml.cloud.ibm.com/ml/v4/deployments/rec/predictions?version=2021-08-31",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "x": 1310,
+        "y": 180,
+        "wires": [
+            [
+                "02da9a8dcfcddbf8",
+                "1ef3a6d98f9c76ef"
+            ]
+        ]
+    },
+    {
+        "id": "02da9a8dcfcddbf8",
+        "type": "debug",
+        "z": "dca51f4a8d1e3e83",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1520,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "1ef3a6d98f9c76ef",
+        "type": "function",
+        "z": "dca51f4a8d1e3e83",
+        "name": "Outputter",
+        "func": "msg.payload=msg.payload.predictions[0].values[0][0]\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1470,
+        "y": 100,
+        "wires": [
+            [
+                "78cbe07c5a7603b6",
+                "7972a59aea50ca89"
+            ]
+        ]
+    },
+    {
+        "id": "78cbe07c5a7603b6",
+        "type": "debug",
+        "z": "dca51f4a8d1e3e83",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1630,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "7972a59aea50ca89",
+        "type": "ui_text",
+        "z": "dca51f4a8d1e3e83",
+        "group": "7ab3785e8c401e99",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "The Recommended Crop is",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 1830,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "df47d39613e28efc",
+        "type": "ui_form",
+        "z": "fc1a98afc52ef543",
+        "name": "",
+        "label": "",
+        "group": "f3a8eac46bc7ec7c",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "options": [
+            {
+                "label": "Crop",
+                "value": "h",
+                "type": "text",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "State",
+                "value": "i",
+                "type": "text",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "Cost_of_Cultivation_Hectare_A2+F1",
+                "value": "j",
+                "type": "number",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "Cost_of_Cultivation_Hectare_C2",
+                "value": "k",
+                "type": "number",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "Cost_of_Production_Quintal ",
+                "value": "l",
+                "type": "number",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "Support_price",
+                "value": "m",
+                "type": "number",
+                "required": true,
+                "rows": null
+            }
+        ],
+        "formValue": {
+            "h": "",
+            "i": "",
+            "j": "",
+            "k": "",
+            "l": "",
+            "m": ""
+        },
+        "payload": "",
+        "submit": "submit",
+        "cancel": "cancel",
+        "topic": "topic",
+        "topicType": "msg",
+        "splitLayout": "",
+        "x": 140,
+        "y": 120,
+        "wires": [
+            [
+                "5d9c8028b46fdf61"
+            ]
+        ]
+    },
+    {
+        "id": "6a0940b2353a439b",
+        "type": "debug",
+        "z": "fc1a98afc52ef543",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 470,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "5d9c8028b46fdf61",
+        "type": "function",
+        "z": "fc1a98afc52ef543",
+        "name": "Setting as global variable",
+        "func": "global.set(\"Crop\",msg.payload.i)\nglobal.set(\"State\",msg.payload.n)\nglobal.set(\"Cost_of_Cultivation_A2+F1\",msg.payload.m)\nglobal.set(\"Cost_of_Cultivation_Hectare_C2\",msg.payload.c)\nglobal.set(\"Cost_of_Production_Quintal\",msg.payload.s)\nglobal.set(\"Support_price\",msg.payload.w)\nvar apikey = \"BhOa2e7LMWJ4-QUvmZZI-2-UsoGJk4gEowaJ70qm807E\"\nmsg.headers={\"content-type\":\"application/x-www-form-urlencoded\"}\nmsg.payload={\"grant_type\":\"urn:ibm:params:oauth:grant-type:apikey\",\"apikey\":apikey}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 330,
+        "y": 200,
+        "wires": [
+            [
+                "6a0940b2353a439b",
+                "8f68d37d49d4e9fa"
+            ]
+        ]
+    },
+    {
+        "id": "8f68d37d49d4e9fa",
+        "type": "http request",
+        "z": "fc1a98afc52ef543",
+        "name": "",
+        "method": "POST",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "https://iam.cloud.ibm.com/identity/token",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "x": 650,
+        "y": 200,
+        "wires": [
+            [
+                "b9ee4b64908f2b04",
+                "b137d42e6adcec6a"
+            ]
+        ]
+    },
+    {
+        "id": "b137d42e6adcec6a",
+        "type": "debug",
+        "z": "fc1a98afc52ef543",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 840,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "b9ee4b64908f2b04",
+        "type": "function",
+        "z": "fc1a98afc52ef543",
+        "name": "Input Formatter",
+        "func": "var h= global.get(\"Crop\")\nvar i = global.get(\"State\")\nvar j = global.get(\"Cost_of_Cultivation_A2+F1\")\nvar k = global.get(\"Cost_of_Cultivation_Hectare_C2\")\nvar l= global.get(\"Cost_of_Production_Quintal\")\nvar m= global.get(\"Support_price\")\nvar token=msg.payload.access_token\nmsg.headers={'Content-Type': 'application/json',\"Authorization\":\"Bearer \"+token,\"Accept\":\"application/json\"}\nmsg.payload={\"input_data\":[{\"fields\": [[\"Crop\", \"State\", \"Cost_of_Cultivation_A2+F1\", \"Cost_of_Cultivation_Hectare_C2\", \"Cost_of_Production_Quintal\", \"Support_price\"]],\"values\": [[h,i,j,k,l,m]]}]}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 910,
+        "y": 200,
+        "wires": [
+            [
+                "fcc353e462038dd2"
+            ]
+        ]
+    },
+    {
+        "id": "fcc353e462038dd2",
+        "type": "http request",
+        "z": "fc1a98afc52ef543",
+        "name": "",
+        "method": "POST",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "https://eu-gb.ml.cloud.ibm.com/ml/v4/deployments/63816168-67ad-4ff8-b5b4-11de232a6e25/predictions?version=2021-08-31",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "x": 1160,
+        "y": 220,
+        "wires": [
+            [
+                "5f503833b9af9788",
+                "f62502fadb34c991"
+            ]
+        ]
+    },
+    {
+        "id": "5f503833b9af9788",
+        "type": "debug",
+        "z": "fc1a98afc52ef543",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1300,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "f62502fadb34c991",
+        "type": "function",
+        "z": "fc1a98afc52ef543",
+        "name": "Output",
+        "func": "payload.predictions[0].values[0][0]\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1410,
+        "y": 220,
+        "wires": [
+            [
+                "95efd4865e94d71a",
+                "59b5f15f5638f867"
+            ]
+        ]
+    },
+    {
+        "id": "95efd4865e94d71a",
+        "type": "debug",
+        "z": "fc1a98afc52ef543",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1580,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "59b5f15f5638f867",
+        "type": "ui_text",
+        "z": "fc1a98afc52ef543",
+        "group": "f3a8eac46bc7ec7c",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "The Predicted Yield is  ",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 1630,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "dc914f815db40b68",
+        "type": "ibmiot in",
+        "z": "dca51f4a8d1e3e83",
+        "authentication": "apiKey",
+        "apiKey": "02cd9eb49b585314",
+        "inputType": "evt",
+        "logicalInterface": "",
+        "ruleId": "",
+        "deviceId": "",
+        "applicationId": "",
+        "deviceType": "+",
+        "eventType": "+",
+        "commandType": "",
+        "format": "json",
+        "name": "IBM IoT",
+        "service": "registered",
+        "allDevices": "",
+        "allApplications": "",
+        "allDeviceTypes": true,
+        "allLogicalInterfaces": "",
+        "allEvents": true,
+        "allCommands": "",
+        "allFormats": "",
+        "qos": 0,
+        "x": 70,
+        "y": 200,
+        "wires": [
+            [
+                "65a5956dbed4e2bc"
+            ]
+        ]
+    }
+]
